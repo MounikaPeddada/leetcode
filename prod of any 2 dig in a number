@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int maxProduct(int n) {
+        int rem,prod=0,a=0;
+        while(n>0)
+        {
+            rem=n%10;
+            prod=max(prod,a*rem);
+            a=max(a,rem);
+            n=n/10;
+
+        }
+        return prod;
+    }
+};
